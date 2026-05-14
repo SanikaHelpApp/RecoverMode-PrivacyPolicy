@@ -40,8 +40,8 @@
 
   <h3>Sensitive and Device-Related Information</h3>
   <ul>
-    <li><strong>Location Data:</strong> Approximate and/or precise location, including when <strong>Recovery Mode</strong> or related safety features are active. Depending on your settings, location may be processed in the foreground and/or background to support zone or safety workflows (for example, safe-zone awareness). Location-derived signals (such as zone classification) may be used only to power App functionality you enable.</li>
-    <li><strong>Camera and Microphone (optional):</strong> Used when you start or join user-initiated live video or audio sessions with your care team (for example, via our real-time video provider). The App does not continuously access the camera or microphone in the background outside features you explicitly use.</li>
+    <li><strong>Location Data:</strong> Approximate and/or precise location when <strong>Recovery Mode</strong> or related safety features are active. When you grant permission, location is processed in the foreground and/or background for safe-zone lookup and safety workflows. Location-derived signals (such as zone classification) are used to power those features.</li>
+    <li><strong>Camera and Microphone (optional):</strong> Used when you start or join user-initiated live video or audio sessions with your care team through <strong>LiveKit</strong>. The App does not continuously access the camera or microphone in the background outside features you explicitly start.</li>
     <li><strong>Photos / Media (where used):</strong> Images or files you choose to attach or share through supported features.</li>
   </ul>
 
@@ -51,15 +51,15 @@
   </ul>
 
   <h3>Third-Party Services and Integrations</h3>
-  <p>Depending on the features you use, data may be processed by providers such as:</p>
+  <p>The App sends your information to or processes it through the following services so features work as designed:</p>
   <ul>
-    <li><strong>Authentication, database, and backend hosting</strong> (for example, cloud infrastructure used to store account and App content you sync).</li>
-    <li><strong>Push notification services</strong> (for example, platform push providers).</li>
-    <li><strong>Realtime video / audio</strong> (for example, when you join a live session).</li>
-    <li><strong>AI or speech-related features</strong> (for example, where the App offers optional guidance or transcription-style features powered by third-party models).</li>
+    <li><strong>Supabase (Supabase Inc.):</strong> User sign-in, application database, and file storage. Account credentials, profile and recovery data, care-team and messaging content you sync, and uploads such as profile images are stored and processed in Supabase.</li>
+    <li><strong>Google Firebase (Firebase Cloud Messaging):</strong> Push notifications. Google processes device tokens, notification payloads, and delivery data required to send alerts to your device.</li>
+    <li><strong>LiveKit (LiveKit Cloud):</strong> Realtime video and audio when you join a live session. LiveKit receives and routes your media streams for the duration of the session.</li>
+    <li><strong>Groq (Groq, Inc.) and our application backend servers:</strong> When you use transcription, AI-generated explanations, or voice or AI sessions over WebSocket, the App sends audio, text, location (for safe-zone and related APIs), and session data to <strong>Groq’s API</strong> and/or to <strong>HTTPS and WebSocket endpoints on servers we operate</strong>. Those systems process the data to return transcriptions, model output, safe-zone results, and session responses.</li>
   </ul>
   <p>
-    <strong>Note:</strong> Recovery Mode may offer subscription or paid features in the future. When subscriptions are available, payment information will be processed securely through Google Play’s billing system, Apple’s in-app purchase system, or other authorized payment processors. Users will have the option to manage or cancel subscriptions according to platform rules.
+    <strong>Note:</strong> If we introduce paid or subscription features, payment information is processed by <strong>Google Play</strong> or <strong>Apple in-app purchase</strong> (or another authorized processor we disclose at that time). We do not store your full payment card details on our own servers. You manage or cancel subscriptions through your app store account, subject to store policies.
   </p>
 
   <h2>How We Use Your Information</h2>
@@ -74,7 +74,7 @@
 
   <h2>Data Retention and Deletion</h2>
   <p><strong>Account and synced App content:</strong> Retained while your account is active and as needed to provide the service, resolve disputes, enforce terms, and meet legal or regulatory requirements.</p>
-  <p><strong>Location:</strong> Processed as needed for features you enable (for example, Recovery Mode). We do not use location to build unrelated advertising profiles. Retention of location-related records, if any, is limited to what is needed for the feature or for security and legal compliance.</p>
+  <p><strong>Location:</strong> Processed when you enable Recovery Mode, safe zones, and related features. We do not use location to build advertising profiles. We retain location-related records only as long as needed for the feature, security, or legal compliance.</p>
   <p><strong>Optional recordings or session artifacts:</strong> If a feature stores session recordings or similar media, retention depends on the feature and your account settings; you may be able to delete certain content in the App where supported.</p>
   <p><strong>Contacts:</strong> Contact selections may be stored on your device, on our systems, or both, depending on the feature. You can remove or change contacts within the App where the feature allows it.</p>
 
@@ -112,7 +112,7 @@
     <li><strong>Withdraw Consent:</strong> Where processing is based on consent, withdraw consent for future processing.</li>
     <li><strong>Object or Restrict:</strong> Object to or ask us to restrict certain processing, where applicable by law.</li>
   </ul>
-  <p>To exercise these rights, contact <a href="mailto:privacy@recoverymode.app">privacy@recoverymode.app</a>.</p>
+  <p>To exercise these rights, contact <a href="mailto:info@helpapp.network">info@helpapp.network</a>.</p>
 
   <h2>Data Security</h2>
   <p>We take data security seriously and implement reasonable technical and organizational measures, which may include:</p>
@@ -127,14 +127,9 @@
 
   <h2>Subscription and Payment Policy</h2>
   <ul>
-    <li>If we offer subscription-based features, payment information will be processed securely through Google Play, the App Store, or other authorized payment processors; we generally do not store your full payment card details on our servers.</li>
-    <li>Users will be able to manage or cancel subscriptions through the applicable app store account settings, subject to platform policies.</li>
+    <li>Paid or subscription features, when offered, route payment processing through <strong>Google Play</strong> or <strong>Apple in-app purchase</strong> (or another processor we name at checkout). We do not store your full payment card details on our servers.</li>
+    <li>You manage or cancel subscriptions in your <strong>Google Play</strong> or <strong>Apple ID</strong> subscription settings, subject to store policies.</li>
   </ul>
-
-  <h2>Third-Party Links</h2>
-  <p>
-    The App may contain links to external websites or resources. We are not responsible for the privacy practices or content of third-party sites. Please review their policies before providing information to them.
-  </p>
 
   <h2>International Users</h2>
   <p>
@@ -143,7 +138,7 @@
 
   <h2>Children’s Privacy</h2>
   <p>
-    Recovery Mode is not intended for children under 13 (or the minimum age required in your jurisdiction) without appropriate parental or guardian authorization as required by law. We do not knowingly collect personal information from children in violation of applicable rules. If you believe we have collected such information, contact <a href="mailto:privacy@recoverymode.app">privacy@recoverymode.app</a> so we can take appropriate action.
+    Recovery Mode is not intended for children under 13 (or the minimum age required in your jurisdiction) without appropriate parental or guardian authorization as required by law. We do not knowingly collect personal information from children in violation of applicable rules. If you believe we have collected such information, contact <a href="mailto:info@helpapp.network">info@helpapp.network</a> for removal.
   </p>
 
   <h2>Changes to This Privacy Policy</h2>
@@ -154,7 +149,9 @@
   <h2>Contact Us</h2>
   <p>If you have questions or concerns about this Privacy Policy or our data practices, please contact us:</p>
   <ul>
-    <li><strong>Email:</strong> <a href="mailto:privacy@recoverymode.app">privacy@recoverymode.app</a></li>
+    <li><strong>Email:</strong> <a href="mailto:info@helpapp.network">info@helpapp.network</a></li>
+    <li><strong>Phone:</strong> (833) 435-7019</li>
+    <li><strong>Mailing Address:</strong> 235 S. Queen Street, Suite 2, Dover, DE 19904</li>
   </ul>
   <p>Thank you for trusting Recovery Mode with your recovery journey and your privacy.</p>
   <p>By using Recovery Mode, you acknowledge that you have read and understood this Privacy Policy.</p>
